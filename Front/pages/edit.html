@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Película | CAC-MOVIES</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/edit.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bodyRegistrarse">
+    <header class="header">
+        <nav class="navegacion">
+            <a class="anclaLogo" href="../index.html">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>CAC-Movies</span>
+            </a>
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="./form.html">Cargar película</a></li>
+                <li class="listaItem"><a class="linkNav" href="#">Registrarse</a></li>
+                <li class="listaItem"><a class="linkNav iniciarSesion" href="#">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse">
+            <form action="" method="get">
+                <h2 class="tituloRegistrarse">Editar película</h2>
+                <div>
+                    <input type="text" placeholder="Título" id="titulo" name="titulo">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Directores" id="directores" name="directores">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Actores" id="actores" name="actores">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Saga" id="saga" name="saga" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <textarea id="descripcion" name="descripcion" placeholder="Descripción de la película" required></textarea>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input class="boton" type="submit" value="Editar">
+                </div>
+                <div>
+                    <a class="ayuda" href="#">¿Necesitas ayuda?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="navegacion">
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
+                <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
+            </ul>
+        </nav>
+        <a href="#main" class="flechaArriba">
+            <img src="../img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+        </a>
+        <p class="aportes">Agradecemos la colaboración de <a href="https://www.linkedin.com/in/gisele-milagros-gonzalez" target="_blank" style="text-decoration: none; color: #c3b5de;">Gisele M. Gonzalez</a></p>
+        <p class="video">Proyecto realizado por: <b>Taborda Maria Belen</b>, <b>Caranfa Lucía Paula Denise</b>, <b>Salgueiro Ezequiel Ignacio</b>, y <b>Fabbro Erica</b>.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+   <script src="../js/edit.js"></script>
+</body>
+
+</html>
