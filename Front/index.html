@@ -1,94 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | CAC-MOVIES</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-</head>
 
-<body>
-    <header class="header">
-        <nav class="navegacion">
-            <a class="anclaLogo" href="./index.html">
-                <i class="fas fa-film" aria-hidden="true"></i>
-                <span>CAC-Movies</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio | CAC-MOVIES</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <header class="header">
+            <nav class="navegacion">
+                <a class="anclaLogo" href="./index.html">
+                    <i class="fas fa-film" aria-hidden="true"></i>
+                    <span>CAC-Movies</span>
+                </a>
+                <ul class="listaNav">
+                    <li class="listaItem"><a class="linkNav" href="./pages/form.html">Cargar película</a></li>
+                    <li class="listaItem"><a class="linkNav" href="#">Registrarse</a></li>
+                    <li class="listaItem"><a class="linkNav iniciarSesion" href="#">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainDetalle" class="mainDetalle"></main>
+
+        <footer class="footer">
+            <nav class="navegacion">
+                <ul class="listaNav">
+                    <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
+                    <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
+                    <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
+                </ul>
+            </nav>
+            <a href="#main" class="flechaArriba">
+                <img src="./img/flecha-hacia-arriba.png" alt="ir arriba flecha">
             </a>
-            <ul class="listaNav">
-                <li class="listaItem"><a class="linkNav" href="./pages/form.html">Cargar película</a></li>
-                <li class="listaItem"><a class="linkNav" href="#">Registrarse</a></li>
-                <li class="listaItem"><a class="linkNav iniciarSesion" href="#">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+            <p class="aportes">Agradecemos la colaboración de <a
+                    href="https://www.linkedin.com/in/gisele-milagros-gonzalez" target="_blank"
+                    style="text-decoration: none; color: #c3b5de;">Gisele M. Gonzalez</a></p>
+            <p class="video">Proyecto realizado por: <b>Taborda Maria Belen</b>, <b>Caranfa Lucía Paula Denise</b>,
+                <b>Salgueiro Ezequiel Ignacio</b>, y <b>Fabbro Erica</b>.
+            </p>
+        </footer>
 
-    <main id="mainDetalle" class="mainDetalle">
-      <section class="detalle"  data-aos="zoom-in" style="height: 80vh;">
-        <div class="contenedorDetalle" >
-
-        <!--La imagen es opcional, si es dificil de manejar/vincular, no la sumamos-->
-
-            <div class="imgDetalle">
-                <img src="./img/mario.jpg" alt="mario pelicula 2023">
-            </div>
-            <div class="textoDetalle">
-
-                <!--El siguiente es un ejemplo de cómo deberia quedar, hay que vincular la entrada del titulo, descripción y datos con la DB-->
-
-                <h1>Traer de la DB</h1> <!---Tabla Movies - GET-->
-                <h2>Descripción</h2>
-                <p>Traer de la DB - Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed, deleniti, sapiente temporibus consequatur eligendi, ex aspernatur nihil aperiam itaque ullam fugit! Libero quis molestias fugit eius nihil facilis perspiciatis.</p> <!---Tabla Movies - GET-->
-                <div class="contenedorCreditos">
-                    <div>
-                        <h3>Traer de la DB</h3> <!---Tabla Directors - GET-->
-                        <p>Directores</p>
-                    </div>
-                    <div>
-                        <h3>Traer de la DB</h3> <!----Tabla Actors/moviesActors - GET-->
-                        <p>Actores</p>
-                    </div>
-                    <div>
-                        <h3>Traer de la DB</h3> <!----Tabla Sagas - GET-->
-                        <p>Saga</p>
-                    </div>
-                </div>
-                <div class="buttonContainer">
-                <div>
-                    <input class="boton" id="btnEditar" type="submit" value="Editar">
-                </div>
-                <div>
-                    <input class="boton" id="btnEliminar" type="submit" value="Eliminar">
-                </div>
-            </div>
-            </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-        <nav class="navegacion">
-            <ul class="listaNav">
-                <li class="listaItem"><a class="linkNav" href="">Términos y condiciones</a></li>
-                <li class="listaItem"><a class="linkNav" href="">Preguntas frecuentes</a></li>
-                <li class="listaItem"><a class="linkNav" href="">Ayuda</a></li>
-            </ul>
-        </nav>
-        <a href="#main" class="flechaArriba">
-            <img src="./img/flecha-hacia-arriba.png" alt="ir arriba flecha">
-        </a>
-        <p class="aportes">Agradecemos la colaboración de <a href="https://www.linkedin.com/in/gisele-milagros-gonzalez" target="_blank" style="text-decoration: none; color: #c3b5de;">Gisele M. Gonzalez</a></p>
-        <p class="video">Proyecto realizado por: <b>Taborda Maria Belen</b>, <b>Caranfa Lucía Paula Denise</b>, <b>Salgueiro Ezequiel Ignacio</b>, y <b>Fabbro Erica</b>.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/index.js"></script>
-    <script>
-    AOS.init();
-    </script>
-</body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="./js/index.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
 
 </html>

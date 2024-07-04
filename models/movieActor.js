@@ -26,7 +26,4 @@ const MovieActor = sequelize.define('MovieActor', {
   timestamps: false,
 });
 
-Movie.belongsToMany(Actor, { through: MovieActor, foreignKey: 'movie_id' });
-Actor.belongsToMany(Movie, { through: MovieActor, foreignKey: 'actor_id' });
-
 module.exports = MovieActor;
