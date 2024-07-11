@@ -5,7 +5,9 @@ CREATE TABLE sagas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
-    start_year YEAR
+    start_year YEAR,
+    createdAt DATETIME,
+    updatedAt DATETIME
 );
 
 CREATE TABLE movies (
@@ -15,6 +17,8 @@ CREATE TABLE movies (
     description varchar(300),
     genre VARCHAR(100),
     saga_id INT,
+    createdAt DATETIME,
+    updatedAt DATETIME,
     FOREIGN KEY (saga_id) REFERENCES sagas(id)
 );
 
@@ -24,6 +28,8 @@ CREATE TABLE reviews (
     review TEXT,
     rating FLOAT,
     reviewer_name VARCHAR(255),
+    createdAt DATETIME,
+    updatedAt DATETIME,
     FOREIGN KEY (movie_id) REFERENCES movies(id)
 );
 
@@ -31,14 +37,18 @@ CREATE TABLE actors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     birthdate DATE,
-    nationality VARCHAR(100)
+    nationality VARCHAR(100),
+    createdAt DATETIME,
+    updatedAt DATETIME
 );
 
 CREATE TABLE directors (
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name varchar(100) NOT NULL,
   birth_date date,
-  nationality varchar(50)
+  nationality varchar(50),
+  createdAt DATETIME,
+  updatedAt DATETIME
 );
 
 CREATE TABLE movie_actors (
@@ -46,6 +56,8 @@ CREATE TABLE movie_actors (
     movie_id INT,
     actor_id INT,
     role VARCHAR(100),
+    createdAt DATETIME,
+    updatedAt DATETIME,
     FOREIGN KEY (movie_id) REFERENCES movies(id),
     FOREIGN KEY (actor_id) REFERENCES actors(id)
 );
@@ -54,6 +66,8 @@ CREATE TABLE movie_director (
   id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   movie_id int(11),
   director_id int(11),
+  createdAt DATETIME,
+  updatedAt DATETIME,
   KEY movie_id (movie_id),
   KEY director_id (director_id),
   CONSTRAINT movie_director_ibfk_1 FOREIGN KEY (movie_id) REFERENCES movies (id) ON DELETE NO ACTION,
